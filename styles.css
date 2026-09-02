@@ -281,7 +281,6 @@ section:nth-of-type(even) { background: var(--bg-raised); }
 /* ── SKILLS ── */
 .skills-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
-  align-items: start;
 }
 .skill-group {
   background: transparent; border: 1px solid var(--border);
