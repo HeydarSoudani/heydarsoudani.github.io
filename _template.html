@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+  Design adapted with permission from Zahra Moti's personal site.
+  Original: https://github.com/zahra7394/personal-website — https://zahramoti.com
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heydar Soudani - Homepage</title>
+  <meta name="description" content="Heydar Soudani — PhD candidate at Radboud University working on Information Retrieval, Retrieval-Augmented Generation, and Uncertainty Estimation for LLMs.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.style.colorScheme = t;
+      document.addEventListener('DOMContentLoaded', function() { document.body.setAttribute('data-theme', t); });
+    })();
+  </script>
+</head>
+<body data-theme="dark">
+
+<!-- build:source-only
+  This file is the SOURCE. index.html is generated from it — run ./build.py
+  after editing, and commit both.
+
+  Page content lives in sections/ — one file per section. Each placeholder
+  below is replaced by the contents of the file it names. To add a section:
+  drop a new .html file in sections/ and add a data-include div here in the
+  position you want it.
+-->
+
+<div data-include="sections/nav.html"></div>
+
+<main>
+  <div data-include="sections/about.html"></div>
+  <div data-include="sections/education.html"></div>
+  <div data-include="sections/experience.html"></div>
+  <div data-include="sections/focus.html"></div>
+  <div data-include="sections/publications.html"></div>
+  <div data-include="sections/talks.html"></div>
+  <div data-include="sections/skills.html"></div>
+  <!-- Scaffolded, not yet populated — see the files themselves. -->
+  <div data-include="sections/service.html"></div>
+  <div data-include="sections/press.html"></div>
+  <div data-include="sections/contact.html"></div>
+</main>
+
+<div data-include="sections/footer.html"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
