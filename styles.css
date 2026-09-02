@@ -355,7 +355,7 @@ a.pub-item { text-decoration: none; color: inherit; }
   font-style: italic;
 }
 .pub-badges {
-  display: flex; flex-direction: column; gap: 0.4rem;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.4rem;
   align-self: start; margin-top: 0.2rem;
 }
 .pub-badge {
@@ -372,6 +372,12 @@ a.pub-item { text-decoration: none; color: inherit; }
 .pub-badge:hover {
   border-color: var(--accent);
 }
+/* Placeholder badge: the artefact isn't published yet, so it renders inert. */
+.pub-badge.is-pending {
+  background: transparent; border-color: var(--border);
+  color: var(--text-muted); opacity: 0.5; cursor: default;
+}
+.pub-badge.is-pending:hover { border-color: var(--border); }
 
 /* ── TIMELINE ── */
 .timeline { position: relative; padding-left: 2.5rem; }
@@ -489,7 +495,7 @@ footer {
   .nav-toggle { display: block; }
   .skills-grid { grid-template-columns: 1fr; }
   .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
-  .pub-badge { justify-self: start; }
+  .pub-badges { justify-content: start; }
   .hero-actions { flex-direction: column; }
   .btn { text-align: center; justify-content: center; }
   .about-highlights { grid-template-columns: 1fr 1fr; gap: 1rem; }
