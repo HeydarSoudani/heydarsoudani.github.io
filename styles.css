@@ -403,6 +403,14 @@ a.pub-item { text-decoration: none; color: inherit; }
 .timeline-item p {
   color: var(--text-muted); font-size: 1.2rem;
 }
+.timeline-list {
+  color: var(--text-muted); font-size: 1.2rem;
+  margin: 0.35rem 0 0 1.2rem;
+}
+.timeline-list li { margin-bottom: 0.15rem; }
+.timeline-item p.supervisor {
+  font-size: 1.05rem; margin-top: 0.3rem;
+}
 .timeline-tags {
   display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.7rem;
 }
