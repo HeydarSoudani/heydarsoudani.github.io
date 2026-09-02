@@ -345,6 +345,11 @@ a.pub-item { text-decoration: none; color: inherit; }
   font-size: 1.2rem; margin-bottom: 0.4rem;
   line-height: 1.5;
 }
+.pub-item .pub-authors {
+  font-size: 0.98rem; color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+.pub-item .pub-authors strong { color: var(--text); font-weight: 600; }
 .pub-item .pub-venue {
   font-size: 0.98rem; color: var(--text-muted);
   font-style: italic;
@@ -403,6 +408,7 @@ a.pub-item { text-decoration: none; color: inherit; }
 .timeline-item p {
   color: var(--text-muted); font-size: 1.2rem;
 }
+.timeline-item p + p { margin-top: 0.3rem; }
 .timeline-list {
   color: var(--text-muted); font-size: 1.2rem;
   margin: 0.35rem 0 0 1.2rem;
