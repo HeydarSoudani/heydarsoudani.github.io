@@ -544,6 +544,9 @@ footer {
 /* Entries that carry a title of their own need a line each, not a wrapped run. */
 .service-items--stacked { flex-direction: column; gap: 0.45rem; }
 .service-items--stacked li { color: var(--text); }
+/* Titles run long, so the kind and venue take a line of their own above them. */
+.service-meta { display: flex; align-items: center; margin-bottom: 0.15rem; }
+.service-items--stacked:has(.service-meta) { gap: 0.9rem; }
 .service-items--stacked a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
 .service-items--stacked a:hover { border-bottom-color: var(--accent); }
 /* Kind of contribution leads the line; the venue and title follow it. */
