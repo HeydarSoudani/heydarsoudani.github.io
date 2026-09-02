@@ -500,54 +500,36 @@ footer {
   .btn { text-align: center; justify-content: center; }
   .about-highlights { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .service-grid { grid-template-columns: 1fr; }
+  .service-row { grid-template-columns: 1fr; gap: 0.3rem; }
   .press-item { flex-direction: column; gap: 0.3rem; }
   .press-outlet { min-width: auto; }
   .press-date { text-align: left; }
 }
 
-/* ACADEMIC SERVICE */
-.service-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+/* ACADEMIC SERVICE — one compact row per role, not a grid of cards. */
+.service-rows { display: flex; flex-direction: column; }
+.service-row {
+  display: grid; grid-template-columns: 14rem 1fr; gap: 1.5rem;
+  padding: 0.9rem 0; border-bottom: 1px solid var(--border);
+}
+.service-row:last-child { border-bottom: none; }
+.service-role {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.02rem; line-height: 1.6;
+}
+.service-items {
+  list-style: none; display: flex; flex-wrap: wrap;
+  gap: 0.3rem 1.1rem; margin: 0; padding: 0;
+}
+.service-items li { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; }
+/* An awaiting-content row reads as deliberate rather than broken. */
+.service-items:empty::after {
+  content: '—'; color: var(--text-muted); opacity: 0.45;
 }
 
-.service-block {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 2rem;
-  transition: border-color 0.3s;
-}
-
-.service-block:hover {
-  border-color: var(--accent);
-}
-
-.service-block h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.15rem;
-  margin-bottom: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.service-block h3::before {
-  content: '';
-  display: inline-block;
-  width: 3px;
-  height: 1.1em;
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-.service-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+/* ── CV ── */
+.cv-section { text-align: center; }
+.cv-actions { display: flex; justify-content: center; }
 
 .service-list li {
   font-size: 0.95rem;
