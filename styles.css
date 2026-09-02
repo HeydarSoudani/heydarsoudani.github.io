@@ -131,6 +131,7 @@ section:nth-of-type(even) { background: var(--bg-raised); }
 }
 .hero-content p {
   color: var(--text-muted); margin-bottom: 0.8rem;
+  text-align: justify;
   opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards;
 }
 .hero-content p strong { color: var(--text); font-weight: 600; }
@@ -509,6 +510,8 @@ footer {
   .nav-toggle { display: block; }
   .skills-grid { grid-template-columns: 1fr; }
   .skills-grid .skill-group:last-child { grid-column: auto; }
+  /* Justifying a column this narrow opens rivers between the words. */
+  .hero-content p { text-align: left; }
   .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
   .pub-badges { justify-content: start; }
   .hero-actions { flex-direction: column; }
@@ -516,6 +519,7 @@ footer {
   .about-highlights { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .service-grid { grid-template-columns: 1fr; }
   .service-row { grid-template-columns: 1fr; gap: 0.3rem; }
+  .service-group { grid-template-columns: 1fr; gap: 0.2rem; }
   .press-item { flex-direction: column; gap: 0.3rem; }
   .press-outlet { min-width: auto; }
   .press-date { text-align: left; }
@@ -537,6 +541,23 @@ footer {
   gap: 0.3rem 1.1rem; margin: 0; padding: 0;
 }
 .service-items li { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; }
+/* Entries that carry a title of their own need a line each, not a wrapped run. */
+.service-items--stacked { flex-direction: column; gap: 0.45rem; }
+.service-items--stacked li { color: var(--text); }
+.service-items--stacked a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.service-items--stacked a:hover { border-bottom-color: var(--accent); }
+/* Venue sits ahead of the entry in the same mono/accent voice as .pub-year. */
+.service-venue {
+  font-family: var(--font-mono); font-size: 0.85rem;
+  color: var(--accent); margin-right: 0.5rem; white-space: nowrap;
+}
+/* Sub-grouped rows (full papers / short papers / journals). */
+.service-groups { display: flex; flex-direction: column; gap: 0.5rem; }
+.service-group { display: grid; grid-template-columns: 8rem 1fr; gap: 0.5rem 1rem; }
+.service-group-label {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--text-muted); opacity: 0.8; padding-top: 0.15rem;
+}
 /* An awaiting-content row reads as deliberate rather than broken. */
 .service-items:empty::after {
   content: '—'; color: var(--text-muted); opacity: 0.45;

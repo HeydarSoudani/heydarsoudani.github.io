@@ -2,23 +2,66 @@
   <div class="container">
     <div class="section-title fade-in">Academic Service</div>
     <!--
-      Rows render empty (an em dash) until entries are added. One <li> per
-      entry, e.g. <li>SIGIR 2025</li> or <li>Talk title — Venue, Month Year</li>.
+      Rows render empty (an em dash) until entries are added. Short entries
+      (venue names) go straight in .service-items; entries with a title of
+      their own use .service-items--stacked, one <li> per line.
     -->
     <div class="service-rows fade-in">
       <div class="service-row">
-        <div class="service-role">Reviewer</div>
-        <ul class="service-items">
+        <div class="service-role">Talks &amp; Tutorials</div>
+        <ul class="service-items service-items--stacked">
+          <li>
+            <span class="service-venue">DIR 2025</span>
+            Organizer, <a href="https://informagus.nl/dir2025/" target="_blank" rel="noopener noreferrer">The 22nd Dutch-Belgian Information Retrieval Workshop</a>
+          </li>
+          <li>
+            <span class="service-venue">SIGIR 2025</span>
+            Enhancing Knowledge Injection in Large Language Models for Efficient and Trustworthy Responses
+          </li>
+          <li>
+            <span class="service-venue">WebConf 2024</span>
+            The Second Tutorial on Data Augmentation for Conversational AI
+          </li>
+          <li>
+            <span class="service-venue">CIKM 2023</span>
+            The First Tutorial on Data Augmentation for Conversational AI
+          </li>
         </ul>
       </div>
       <div class="service-row">
-        <div class="service-role">Invited Talks &amp; Tutorials</div>
-        <ul class="service-items">
-        </ul>
+        <div class="service-role">Program Committee Member</div>
+        <div class="service-groups">
+          <div class="service-group">
+            <div class="service-group-label">Full papers</div>
+            <ul class="service-items">
+              <li>ACL 2025</li>
+              <li>EMNLP 2026</li>
+              <li>SIGIR 2026</li>
+              <li>CIKM 2026</li>
+            </ul>
+          </div>
+          <div class="service-group">
+            <div class="service-group-label">Short papers</div>
+            <ul class="service-items">
+              <li>SIGIR 2026</li>
+              <li>ECIR 2026</li>
+              <li>WSDM 2026</li>
+            </ul>
+          </div>
+          <div class="service-group">
+            <div class="service-group-label">Journals</div>
+            <ul class="service-items">
+              <li>TOIS</li>
+              <li>ACM Computing Surveys</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="service-row">
         <div class="service-role">Thesis Supervision</div>
-        <ul class="service-items">
+        <ul class="service-items service-items--stacked">
+          <li>Uncertainty Quantification for Multimodal Retrieval-Augmented Generation</li>
+          <li>Failure Modes of Deep Research Agents in Context-Aided Forecasting</li>
         </ul>
       </div>
     </div>
