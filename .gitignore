@@ -5,3 +5,7 @@ _site
 Gemfile.lock
 *.code-workspace
 images/profile-original.jpg
+
+# CV: keep the built PDF, ignore the LaTeX sources and build artifacts
+cv/*
+!cv/HeydarSoudani_CV.pdf

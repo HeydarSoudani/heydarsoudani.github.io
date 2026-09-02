@@ -460,13 +460,6 @@ footer {
   border-top: 1px solid var(--border);
 }
 
-.footer-link {
-  color: var(--accent); text-decoration: none;
-  transition: opacity 0.3s;
-}
-.footer-link:hover { opacity: 0.75; text-decoration: underline; }
-.footer-sep { margin: 0 0.15rem; }
-
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
