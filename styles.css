@@ -546,10 +546,17 @@ footer {
 .service-items--stacked li { color: var(--text); }
 .service-items--stacked a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
 .service-items--stacked a:hover { border-bottom-color: var(--accent); }
-/* Venue sits ahead of the entry in the same mono/accent voice as .pub-year. */
+/* Kind of contribution leads the line; the venue and title follow it. */
+.service-kind {
+  font-family: var(--font-mono); font-size: 0.78rem;
+  padding: 0.15rem 0.5rem; border-radius: 3px; margin-right: 0.55rem;
+  background: var(--accent-dim); color: var(--accent);
+  letter-spacing: 0.02em; white-space: nowrap;
+}
+/* Venue follows the pill, quieter so the two tags do not compete. */
 .service-venue {
   font-family: var(--font-mono); font-size: 0.85rem;
-  color: var(--accent); margin-right: 0.5rem; white-space: nowrap;
+  color: var(--text-muted); margin-right: 0.5rem; white-space: nowrap;
 }
 /* Sub-grouped rows (full papers / short papers / journals). */
 .service-groups { display: flex; flex-direction: column; gap: 0.5rem; }
