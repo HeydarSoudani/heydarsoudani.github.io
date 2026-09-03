@@ -306,7 +306,7 @@ section:nth-of-type(even) { background: var(--bg-raised); }
 /* Technical skills: one row of three columns; the first column stacks
    Languages over Infrastructure & Tools at half the row height each. */
 .skills-grid--tech { grid-template-columns: repeat(3, 1fr); }
-.skill-col { display: grid; grid-template-rows: 1fr 1fr; gap: 1.5rem; }
+.skill-col { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 2rem; }
 
 /* ── PROJECTS ── */
 .projects-grid {
