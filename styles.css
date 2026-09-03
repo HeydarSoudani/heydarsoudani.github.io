@@ -281,7 +281,8 @@ section:nth-of-type(even) { background: var(--bg-raised); }
 
 /* ── SKILLS ── */
 .skills-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 .skill-group {
   background: transparent; border: 1px solid var(--border);
@@ -492,8 +493,6 @@ footer {
   .hero-content { text-align: left; }
   .about-highlights { grid-template-columns: 1fr 1fr; }
   .timeline-h { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
-  .skills-grid .skill-group:last-child { grid-column: 1 / -1; }
   .projects-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
@@ -508,8 +507,6 @@ footer {
   .nav-cv { align-self: flex-start; }
   nav ul.open { display: flex; }
   .nav-toggle { display: block; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .skills-grid .skill-group:last-child { grid-column: auto; }
   /* Justifying a column this narrow opens rivers between the words. */
   .hero-content p { text-align: left; }
   .pub-item { grid-template-columns: 1fr; gap: 0.5rem; }
