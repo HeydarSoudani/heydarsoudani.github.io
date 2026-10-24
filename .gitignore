@@ -10,5 +10,5 @@ images/profile-original.jpg
 cv/*
 !cv/HeydarSoudani_CV.pdf
 
-# Private job search tracker (has its own local git repo)
+# Private job search tracker, kept out of git
 job-search/
